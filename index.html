@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calcman</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="main.js"></script>
+	</head>
+	<body onload="init()">
+		<section id="calculator">
+			<div id="input"></div>
+			<div id="keypad">
+				<div class="button-row">
+					<div class="button" data-n="7">7</div>
+					<div class="button" data-n="8">8</div>
+					<div class="button" data-n="9">9</div>
+					<div class="button" data-n="+">+</div>
+				</div>
+				<div class="button-row">
+					<div class="button" data-n="4">4</div>
+					<div class="button" data-n="5">5</div>
+					<div class="button" data-n="6">6</div>
+					<div class="button" data-n="-">-</div>
+				</div>
+				<div class="button-row">
+					<div class="button" data-n="1">1</div>
+					<div class="button" data-n="2">2</div>
+					<div class="button" data-n="3">3</div>
+					<div class="button" data-n="*">*</div>
+				</div>
+				<div class="button-row">
+					<div class="button" data-n="0">0</div>
+					<div class="button" data-n=".">.</div>
+					<div class="button" data-n="=">=</div>
+					<div class="button" data-n="/">/</div>
+				</div>
+			</div>
+		</section>
+		<section id="hangman">
+			<div id="canvas">
+				<img id="hangmanImage">
+			</div>
+			<div id="calculation">
+			</div>
+			<div id="blanks">
+			</div>
+			<div id="digits">
+				<div class="button-small" data-n="-" data-clicked="0">-</div>
+				<div class="button-small" data-n="1" data-clicked="0">1</div>
+				<div class="button-small" data-n="2" data-clicked="0">2</div>
+				<div class="button-small" data-n="3" data-clicked="0">3</div>
+				<div class="button-small" data-n="4" data-clicked="0">4</div>
+				<div class="button-small" data-n="5" data-clicked="0">5</div>
+				<div class="button-small" data-n="6" data-clicked="0">6</div>
+				<div class="button-small" data-n="7" data-clicked="0">7</div>
+				<div class="button-small" data-n="8" data-clicked="0">8</div>
+				<div class="button-small" data-n="9" data-clicked="0">9</div>
+				<div class="button-small" data-n="0" data-clicked="0">0</div>
+				<div class="button-small" data-n="." data-clicked="0">.</div>
+			</div>
+			<p id="hangmanText"></p>
+		</section>
+	</body>
+</html>
