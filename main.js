@@ -16,7 +16,7 @@ function buttonClick(n) {
 		}
 	}
 	else if (input.innerText.length < 16) {
-		if (isDigit(n)) {
+		if (isDigit(n) || input.innerText == "") {
 			input.innerText += "" + n;
 		}
 		else {
