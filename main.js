@@ -15,8 +15,11 @@ function buttonClick(n) {
 			startHangman();
 		}
 	}
-	else {
+	else if (input.innerText.length < 18) {
 		input.innerText += "" + n;
+	}
+	else {
+		alert("max input size reached");
 	}
 }
 
