@@ -16,16 +16,15 @@ function buttonClick(n) {
 		}
 	}
 	else if (input.innerText.length < 16) {
-		if (n == "*" || n == "/") {
-			if (input.innerText[input.innerText.length - 1] == "*" || input.innerText[input.innerText.length - 1] == "/") {
-				console.log("**");
-			}
-			else {
-				input.innerText += "" + n;
-			}
+		if (isDigit(n)) {
+			input.innerText += "" + n;
 		}
 		else {
-			input.innerText += "" + n;
+			if (isDigit(input.innerText[input.innerText.length - 1])) {
+				input.innerText += "" + n;
+			}
+			else {
+				console.log("**");
 		}
 	}
 	else {
@@ -125,4 +124,12 @@ function proceedHangman() {
 
 function cleanCalculation(s) {
 	return s.replaceAll("+", " + ").replaceAll("-", " - ").replaceAll("*", " * ").replaceAll("/", " / ").replaceAll("=", " =");
+}
+
+function isDigit(s) {
+	if (s == "0" || s == "1" || s == "2" || s == "3" || s == "4" || s == "5"
+		|| s == "6" || s == "7" || s == "8" || s == "9") {
+		return true;
+	}
+	return false;
 }
