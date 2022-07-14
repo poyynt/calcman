@@ -15,8 +15,18 @@ function buttonClick(n) {
 			startHangman();
 		}
 	}
-	else if (input.innerText.length < 18) {
-		input.innerText += "" + n;
+	else if (input.innerText.length < 16) {
+		if (n == "*" || n == "/") {
+			if (input.innerText[input.innerText.length - 1] == "*" || input.innerText[input.innerText.length - 1] == "/") {
+				console.log("**");
+			}
+			else {
+				input.innerText += "" + n;
+			}
+		}
+		else {
+			input.innerText += "" + n;
+		}
 	}
 	else {
 		alert("max input size reached");
