@@ -25,6 +25,7 @@ function buttonClick(n) {
 			}
 			else {
 				console.log("**");
+			}
 		}
 	}
 	else {
