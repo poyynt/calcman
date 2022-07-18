@@ -1,4 +1,4 @@
-var input, buttons, smallButtons, result, blanks, lives = 5;
+var input, del, buttons, smallButtons, result, blanks, lives = 5;
 var hangmans = [
 	"assets/hangman4.svg",
 	"assets/hangman5.svg",
@@ -64,9 +64,16 @@ function smallButtonClick(n) {
 
 function init() {
 	input = document.getElementById("input");
+	del = document.getElementById("delete");
 	buttons = document.getElementsByClassName("button");
 	blanks = document.getElementById("blanks")
 	smallButtons = document.getElementsByClassName("button-small")
+
+	del.addEventListener("click", (ev) => {
+		if (ev.isTrusted) {
+			backspace();
+		}
+	});
 
 	for (var i = 0; i < buttons.length; i++) {
 		buttons[i].addEventListener("click", (ev) => {
@@ -133,4 +140,10 @@ function isDigit(s) {
 		return true;
 	}
 	return false;
+}
+
+function backspace() {
+	if (input.innerText.length > 0) {
+		input.innerText = input.innerText.substr(0, input.innerText.length - 1);
+	}
 }

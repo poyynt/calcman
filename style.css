@@ -61,6 +61,7 @@ table {
 	font-family: monospace;
 	font-size: 2rem;
 	cursor: default;
+	display: inline-block;
 }
 
 .button {
@@ -123,4 +124,14 @@ table {
 	font-size: 1.5rem;
 	margin: 0.5rem;
 	font-family: monospace;
+}
+
+#delete {
+	display: inline-block;
+	height: 2rem;
+	margin: 0.5rem;
+	margin-left: 0;
+	padding: 0.5rem;
+	padding-left: 0;
+	cursor: pointer;
 }
